@@ -1,0 +1,167 @@
+<style>
+  .card-1 {
+    background-color: #73b23e;
+    border: 1px solid #0063373d;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+  }
+
+  .bullets {
+    width: 15px;
+    height: 15px;
+    background: #8ac43e;
+    border-radius: 50%;
+  }
+</style>
+
+<div class="relative">
+  <img src="../../imgs/governance/shape-1.svg" class="object-cover pointer-events-none absolute left-[-200px] top-[-200px] w-[800px] h-[800px]" />
+  <img src="../../imgs/governance/shape-2.svg" class="object-cover pointer-events-none absolute left-1/2 -translate-x-1/2 top-[-100px] w-[900px] h-[1200px]" />
+  <img src="../../imgs/governance/shape-3.svg" class="object-cover pointer-events-none absolute left-0 -translate-y-1/2 top-1/2 w-[1000px] h-[700px]" />
+  <img src="../../imgs/governance/shape-4.svg" class="object-cover z-[-1] pointer-events-none absolute inset-0 w-full h-full" />
+
+  <div  class="container z-[10] relative !py-[70px]">
+    <h1 class="capitalize text-[#0F0F0F] font-[600] text-[30px] md:text-[46px]" data-i18n="governance.title">organizational structure</h1>
+    <p class="mt-2 mb-8 max-w-[750px] w-full text-[#0F0F0F] font-[600] text-[16px] md:text-[20px]" data-i18n="governance.subtitle">The structure of the Board of Directors at Alandalus Property is designed to ensure effective oversight, strategic guidance, and sound decision-making, in alignment with corporate governance best practices.</p>
+
+    <div dir="ltr" class="custom-scroll !overflow-x-auto">
+      <div class="min-w-[1400px] !py-[100px]">
+        <div class="row">
+          <div class="max-w-[200px] card-1 col-start-6 rounded-lg" data-i18n="governance.boardOfDirectors">Board of Directors</div>
+        </div>
+
+        <div class="row pt-[100px] relative">
+          <div class="absolute border-[#8AC43E] border-t-[3px] border-l-[3px] rounded-[20px_0_0_0] w-[51.5%] h-[129px] z-[-1] left-[20.5%] top-[-18%]">
+            <div class="bullets absolute right-0 top-0 -translate-y-1/2"></div>
+            <div class="bullets absolute left-0 bottom-0 -translate-x-1/2"></div>
+          </div>
+
+          <div class="absolute border-[#8AC43E] border-t-[3px] border-l-[3px] border-r-[3px] rounded-[20px_20px_0_0] w-[29%] h-[60px] z-[-1] left-[6%] top-[17%]">
+            <div class="bullets absolute right-0 bottom-0 translate-x-1/2"></div>
+            <div class="bullets absolute left-0 bottom-0 -translate-x-1/2"></div>
+          </div>
+
+          <div class="w-[8%] h-[285px] right-[13%] top-[2%] absolute border-[#006337] border-l-[3px]">
+            <div class="!bg-[#006337] bullets absolute left-[-1px] top-[0px] -translate-x-1/2"></div>
+            <div class="!bg-[#006337] bullets absolute left-[-1px] bottom-[-2px] -translate-x-1/2"></div>
+            <div class="!bg-[#006337] bullets absolute right-[6px] top-1/2 -translate-y-1/2"></div>
+            <div class="!bg-[#006337] w-[86%] h-[2px] absolute left-0 top-1/2 -translate-y-1/2"></div>
+          </div>
+
+          <div class="max-w-[200px] !bg-[#267D39] card-1 col-start-1 rounded-lg" data-i18n="governance.auditCommittee">audit committee</div>
+          <div class="max-w-[200px] !bg-[#267D39] card-1 col-start-2 rounded-lg" data-i18n="governance.nominationsRemuneration">Nominations &amp; Remuneration Committee</div>
+          <div class="max-w-[200px] !bg-[#267D39] card-1 col-start-3 rounded-lg" data-i18n="governance.executiveCommittee">Executive Committee</div>
+          <div class="max-w-[200px] !bg-[#267D39] card-1 col-start-7 rounded-lg" data-i18n="governance.boardSecretariat">Board of Directors Secretariat</div>
+        </div>
+
+        <div class="row pt-[100px] relative">
+          <div class="absolute border-dashed border-[#006337] border-r-[3px] w-0 h-[81px] left-[6%] top-[6%]"></div>
+          <div class="absolute border-dashed border-[#8DC63F] border-t-[3px] w-[58.5%] h-0 left-[13.5%] top-[81%]"></div>
+
+          <div class="max-w-[200px] card-1 col-start-1 rounded-lg" data-i18n="governance.internalAudit">internal audit</div>
+          <div class="max-w-[200px] card-1 col-start-6 rounded-lg" data-i18n="governance.ceo">(CEO)</div>
+        </div>
+
+        <div class="row pt-[100px] relative">
+          <div class="absolute w-[37%] h-[297px] left-[42.3%] top-[6px]">
+            <span class="absolute top-[41%] -translate-1/2 h-0 w-full border-t-[3px] border-dashed border-t-[#8DC63F]"> </span>
+            <span class="absolute top-0 right-0 h-full w-0 border-r-[3px] border-dashed border-r-[#8DC63F]"> </span>
+            <div class="bullets absolute right-[-6px] bottom-[-2px]"></div>
+          </div>
+
+          <div class="absolute w-[14%] h-[457px] right-[0%] top-[-153px]">
+            <span class="absolute top-[123px] -translate-1/2 h-0 w-[55%] border-t-[3px] border-dashed border-t-[#8DC63F]"> </span>
+            <span class="absolute top-0 left-[54%] -translate-1/2 h-full w-0 border-r-[3px] border-dashed border-r-[#8DC63F]"> </span>
+            <div class="bullets absolute left-[51%] bottom-[-2px]"></div>
+            <div class="bullets absolute left-[-1px] top-[117px]"></div>
+            <div class="bullets absolute left-[51%] top-[-1px]"></div>
+          </div>
+
+          <div class="max-w-[200px] card-1 col-start-3 rounded-lg" data-i18n="governance.ceoOfficeManager">CEO’s Office Manager</div>
+        </div>
+
+        <div class="row pt-[155px] relative">
+          <div class="absolute w-full h-[100px] left-0 top-[45px]">
+            <span class="absolute top-[42px] left-1/2 -translate-x-1/2 w-[87.5%] border-dashed border-[#8DC63F] border-r-[3px] border-l-[3px] border-t-[3px] rounded-[30px_15px_0_0] h-[57px]"></span>
+            <div class="bullets absolute left-[5.9%] bottom-[0px]"></div>
+            <div class="absolute left-[21.12%] h-[56%] border-r-[3px] border-dashed border-r-[#8DC63F] w-0 bottom-[0px]">
+              <div class="bullets absolute left-[-6px] bottom-[-1px]"></div>
+            </div>
+            <div class="absolute left-[35.5%] h-[57.5%] border-r-[3px] border-dashed border-r-[#8DC63F] w-0 bottom-[0px]">
+              <div class="bullets absolute left-[-6px] bottom-[-1px]"></div>
+            </div>
+            <div class="absolute left-[50%] h-[57.5%] border-r-[3px] border-dashed border-r-[#8DC63F] w-0 bottom-[0px]">
+              <div class="bullets absolute left-[-6px] bottom-[-1px]"></div>
+            </div>
+            <div class="absolute left-[64.5%] h-[57.5%] border-r-[3px] border-dashed border-r-[#8DC63F] w-0 bottom-[0px]">
+              <div class="bullets absolute left-[-6px] bottom-[-1px]"></div>
+            </div>
+          </div>
+
+          <div class="col-start-1 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.cfo">Chief Financial Officer</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.financeManagement">Finance Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.accountingDept">Accounting Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.fpaDept">Financial Planning &amp; Analysis Department</span>
+          </div>
+
+          <div class="col-start-2 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.gmLeasing">General Manager of the Leasing Sector</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.leasingCollection">Leasing &amp; Collection Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.contractsProperties">Contracts &amp; Properties Department</span>
+          </div>
+
+          <div class="col-start-3 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.gmEngineering">GM of Engineering Services Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.projectsManagement">Projects Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.maintenanceDept">Maintenance Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.tenantDesignDept">Tenant Design Department</span>
+          </div>
+
+          <div class="col-start-4 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.gmSharedServices">GM of Shared Services Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.hrManagement">HR Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.itManagement">IT Management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.procurementDept">Procurement Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.adminAffairsDept">Administrative Affairs Department</span>
+          </div>
+
+          <div class="col-start-5 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.legalAffairs">Legal Affairs Management</span>
+          </div>
+
+          <div class="col-start-6 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.gmBizDev">GM of Business Development Services</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.marketingDept">Marketing Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.prDept">PR Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.bizDevDept">Business Development Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.pmoDept">(PMO) Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.partnershipsDept">Partnerships Department</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.customerExperienceDept">Customer experience Department</span>
+          </div>
+
+          <div class="col-start-7 flex flex-col gap-3">
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.gmRental">General Manager of the Renta</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.grcManagement">(GRC) management</span>
+            <span class="max-w-[200px] !bg-transparent !text-[#006337] !border-[#006337] card-1" data-i18n="governance.investorRelations">Investor Relations Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,294 @@
+<style>
+  :root {
+    --spine: 12px;
+    --brand: #006337;
+    --spine-bg: rgb(229 231 235);
+    --text-muted: #5d5d5d;
+  }
+
+  /* ===== Layout ===== */
+  .container {
+    position: relative;
+  }
+
+  .timeline-spine {
+    position: absolute;
+    inset-block: 0;
+    inline-size: var(--spine);
+    border-radius: 9999px;
+    background: var(--spine-bg);
+    inset-inline-start: 50%;
+  }
+
+  .step {
+    position: relative;
+  }
+  .step.in-view {
+    opacity: 1;
+  }
+
+  .vline {
+    position: absolute;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 10px 10px 0 0;
+    z-index: 1;
+    width: var(--spine);
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .vline::after {
+    content: '';
+    position: absolute;
+    background: var(--brand);
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: height 1s ease;
+  }
+  .step.filling .vline::after {
+    height: 100% !important;
+  }
+
+  .reveal {
+    opacity: 0;
+    transition: opacity 0.4s ease 0.15s;
+  }
+  .step.in-view .reveal {
+    opacity: 1;
+  }
+
+  /* Highlight the step closest to viewport center */
+  .step.active .title {
+    margin-block-start: -6px;
+    color: #0f0f0f;
+    transition: margin 0.3s ease, color 0.3s ease;
+  }
+
+  /* Left / Right placement (desktop) */
+  .side-left {
+    width: 50%;
+    margin-inline-start: auto;
+    padding: 0 3rem 3rem 3rem; /* px-12 pb-12 */
+  }
+  .side-right {
+    width: 50%;
+    margin-inline-end: auto;
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  .side-left .vline {
+    inset-inline-start: 0px;
+    border-radius: 10px 10px 0 0;
+  }
+  .side-right .vline {
+    right: -12px;
+    left: unset;
+    border-radius: 10px 10px 0 0;
+  }
+
+  html[dir='rtl'] .side-left .vline {
+    inset-inline-end: -17px;
+  }
+  html[dir='rtl'] .side-right .vline {
+    inset-inline-start: 100%;
+  }
+
+  /* Last step rounded bottom */
+  .step:last-child.side-left .vline,
+  .step:last-child.side-right .vline {
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* Typography helpers */
+  .font-number {
+    font-variant-numeric: tabular-nums;
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1024px) {
+    .timeline-spine {
+      inset-inline-start: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    .timeline-spine {
+      inset-inline-start: -5px; /* keeps spine visible left */
+    }
+    .side-left,
+    .side-right,
+    .step {
+      width: 100% !important;
+      padding: 0 1rem 2rem 3rem; /* room for spine */
+    }
+    .side-left .vline,
+    .side-right .vline {
+      inset-inline-start: -15px !important;
+    }
+    .hero-art {
+      display: none; /* hide big side art on phones */
+    }
+    .kicker-number {
+      left: 32px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .step,
+    .reveal {
+      transition: none !important;
+    }
+    .vline::after {
+      top: 0 !important;
+    }
+  }
+</style>
+
+<section class="relative !py-[150px]" data-timeline aria-labelledby="timeline-title">
+  <!-- Optional side art (decorative) -->
+  <img src="/imgs/sec-3.png" alt="" aria-hidden="true" class="hero-art pointer-events-none select-none absolute left-0 top-0 w-[300px] h-full object-contain" loading="lazy" />
+
+  <div class="container !max-w-[1200px] ">
+    <h2 id="timeline-title" class="sr-only" data-i18n="home.timeline.title">Sustainability Pillars Timeline</h2>
+
+    <!-- Center spine -->
+    <span class="timeline-spine" aria-hidden="true"></span>
+
+    <!-- Top number (01) -->
+    <span class="max-[768px]:hidden kicker-number font-number absolute -top-14 rtl:ml-[-10px] left-1/2 -translate-x-1/2 text-5xl font-[600] text-[color:var(--brand)]" data-i18n="home.timeline.section1.number">01</span>
+
+    <!-- === Step 1 === -->
+    <div class="step side-left">
+      <span class="vline"></span>
+      <div class="reveal">
+        <div class="min-[768px]:hidden font-number text-5xl font-[600] text-[color:var(--brand)]" data-i18n="home.timeline.section1.number">01</div>
+        <h3 class="title mb-2 text-[28px] md:text-[32px] font-semibold" data-i18n="home.timeline.section1.title">Environment</h3>
+        <ul class="text-muted font-[500] space-y-2">
+          <li class="text-balance" data-i18n="home.timeline.section1.point1">Reduce environmental impact through sustainable practices in biodiversity, water, and waste management.</li>
+          <li class="text-balance" data-i18n="home.timeline.section1.point2">Reduce energy consumption for all facilities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- === Step 2 === -->
+    <div class="step side-right">
+      <span class="vline !rounded-none"></span>
+      <div class="reveal">
+        <div class="font-number text-5xl font-[600] text-[color:var(--brand)]" data-i18n="home.timeline.section2.number">02</div>
+        <h3 class="title mb-2 text-[28px] md:text-[32px] font-semibold" data-i18n="home.timeline.section2.title">Economic Contribution</h3>
+        <p class="text-muted font-[500]" data-i18n="home.timeline.section2.point">Contribute to strengthening Saudi Arabia’s economic growth, labor market, and community development.</p>
+      </div>
+    </div>
+
+    <!-- === Step 3 === -->
+    <div class="step side-left">
+      <span class="vline !rounded-none"></span>
+      <div class="reveal">
+        <div class="font-number text-5xl font-[600] text-[color:var(--brand)]" data-i18n="home.timeline.section3.number">03</div>
+        <h3 class="title mb-2 text-[28px] md:text-[32px] font-semibold" data-i18n="home.timeline.section3.title">Diversity &amp; Development</h3>
+        <ul class="text-muted font-[500] space-y-2">
+          <li class="text-balance" data-i18n="home.timeline.section3.point1">Encourage and lead diversity and employee development regionally.</li>
+          <li class="text-balance" data-i18n="home.timeline.section3.point2">Promote female representation in higher positions and board membership.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- === Step 4 === -->
+    <div class="step side-right">
+      <span class="vline !rounded-none"></span>
+      <div class="reveal">
+        <div class="font-number text-5xl font-[600] text-[color:var(--brand)]" data-i18n="home.timeline.section4.number">04</div>
+        <h3 class="title mb-2 text-[28px] md:text-[32px] font-semibold" data-i18n="home.timeline.section4.title">Health, Safety, &amp; Security</h3>
+        <ul class="text-muted font-[500] space-y-2">
+          <li class="text-balance" data-i18n="home.timeline.section4.point1">Ensure a strong HSE system for all employees and visitors.</li>
+          <li class="text-balance" data-i18n="home.timeline.section4.point2">Promote a healthy lifestyle and encourage the local community.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- === Step 5 === -->
+    <div class="step side-left">
+      <span class="vline"></span>
+      <div class="reveal">
+        <div class="font-number text-5xl font-[600] text-[color:var(--brand)]" data-i18n="home.timeline.section5.number">05</div>
+        <h3 class="title mb-2 text-[28px] md:text-[32px] font-semibold" data-i18n="home.timeline.section5.title">Business Sustainability</h3>
+        <ul class="text-muted font-[500] space-y-2">
+          <li class="text-balance" data-i18n="home.timeline.section5.point1">Ensure corporate operations and governance are implemented, transparent, and compliant.</li>
+          <li class="text-balance" data-i18n="home.timeline.section5.point2">Incorporate risk management into all business activities and planning.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ===== Timeline animation & active step =====
+  const section = document.querySelector('[data-timeline]');
+  const steps = Array.from(section.querySelectorAll('.step'));
+
+  const LINE_ANIM_MS = 1000;
+  const STAGGER_MS = 50;
+
+  const indexOf = new Map(steps.map((el, i) => [el, i]));
+  let queue = [];
+  let running = false;
+
+  function enqueue(step) {
+    if (step.classList.contains('played')) return;
+    if (queue.includes(step)) return;
+    queue.push(step);
+    queue.sort((a, b) => indexOf.get(a) - indexOf.get(b));
+    if (!running) runQueue();
+  }
+
+  function runQueue() {
+    if (queue.length === 0) {
+      running = false;
+      return;
+    }
+    running = true;
+    const step = queue.shift();
+    step.classList.add('in-view', 'filling', 'played');
+    setTimeout(runQueue, LINE_ANIM_MS + STAGGER_MS);
+  }
+
+  const io = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) enqueue(entry.target);
+      });
+    },
+    // A slightly lower threshold helps small screens
+    { threshold: window.matchMedia('(max-width: 768px)').matches ? 0.2 : 0.35 },
+  );
+  steps.forEach(s => io.observe(s));
+
+  // Mark the step nearest to viewport center as active
+  function updateActive() {
+    const mid = innerHeight / 2;
+    let best = null,
+      dist = Infinity;
+    steps.forEach(s => {
+      const r = s.getBoundingClientRect();
+      const c = r.top + r.height / 2;
+      const d = Math.abs(c - mid);
+      if (d < dist) {
+        dist = d;
+        best = s;
+      }
+    });
+    steps.forEach(s => s.classList.toggle('active', s === best));
+  }
+  addEventListener('scroll', updateActive, { passive: true });
+  addEventListener('resize', updateActive);
+  updateActive();
+</script>
+
+

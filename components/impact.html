@@ -1,0 +1,251 @@
+<section id="materiality-matrix-section" class="custom-scroll overflow-x-auto overflow-y-hidden relative py-[50px]">
+  <div class="min-w-[900px] relative container !px-8 lg:!px-16" style="padding: 0 60px !important">
+    <!-- Matrix -->
+    <div id="materiality-matrix" class="relative w-full h-[520px] sm:h-[580px] lg:h-[600px] rounded-xl bg-gradient-to-br from-green-50 via-white to-green-50" role="application" aria-label="Materiality Matrix">
+      <img src="../imgs/shapes-bg.svg" class="absolute inset-0 w-full h-full object-cover" alt="" aria-hidden="true" />
+
+      <!-- Axes -->
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="absolute h-[calc(100%-20px)] left-[-5px] top-[10px] border-l-[3px] border-[#075130]"></div>
+        <div class="absolute w-[calc(100%-20px)] left-[10px] bottom-[-5px] border-b-[3px] border-[#075130]"></div>
+        <div class="absolute rounded-[0_0_0_10px] border-l-[3px] border-b-[3px] border-[#075130] left-[-5px] bottom-[-5px] w-4 h-4"></div>
+      </div>
+
+      <!-- Guides -->
+      <div class="absolute inset-0" aria-hidden="true">
+        <div class="absolute left-0 right-0 top-1/2 -translate-y-px border-t-[3px] border-dashed border-[#075130]"></div>
+        <div class="absolute top-0 bottom-0 left-1/2 -translate-x-px border-l-[3px] border-dashed border-[#075130]"></div>
+      </div>
+
+      <!-- Points -->
+      <div class="absolute inset-6 sm:inset-8" id="points-layer" role="list"></div>
+
+      <!-- Tooltip -->
+      <div id="mm-tooltip" class="mmx-tip pointer-events-none invisible opacity-0 absolute z-20" role="tooltip">
+        <span id="mm-tooltip-text" data-i18n="home.matrix.tooltip.default">Topic</span>
+      </div>
+    </div>
+
+    <!-- Y Label -->
+    <div class="flex items-center justify-center w-[30px] absolute left-[15px] top-1/2">
+      <div class="text-nowrap text-center rotate-[-90deg] text-[#075130] font-[700] text-[18px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center" data-i18n="home.matrix.axis_y">IMPACT TO EXTERNAL STAKEHOLDERS</div>
+    </div>
+
+    <!-- X Label -->
+    <div class="absolute left-1/2 bottom-[-50px] -translate-x-1/2 px-2">
+      <div class="text-[#075130] font-[700] text-[18px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center" data-i18n="home.matrix.axis_x">IMPACT TO INTERNAL STAKEHOLDERS</div>
+    </div>
+  </div>
+
+  <style>
+    .pentabadge {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      clip-path: polygon(50% 0%, 95% 38%, 77% 100%, 23% 100%, 5% 38%);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+      user-select: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .penta-teal {
+      background: #189791;
+    }
+    .penta-lime {
+      background: #138a4a;
+    }
+    .penta-emerald {
+      background: #8dc63f;
+    }
+
+    .pentabadge:hover,
+    .pentabadge:focus-visible {
+      transform: translate(-50%, -50%) scale(1.06);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18), 0 3px 8px rgba(0, 0, 0, 0.1);
+      outline: none;
+    }
+
+    .mmx-tip {
+      background: #075130;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      white-space: nowrap;
+      transform: translate(-50%, -100%);
+      transition: opacity 0.15s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    .mmx-tip::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #075130;
+      transform: translate(-50%, -50%) rotate(45deg);
+      left: 50%;
+      top: 100%;
+      border-radius: 2px;
+    }
+    .mmx-tip.mmx-right {
+      transform: translate(10px, -50%);
+    }
+    .mmx-tip.mmx-right::after {
+      left: -2px;
+      top: 50%;
+    }
+    .mmx-tip.mmx-left {
+      transform: translate(calc(-100% - 10px), -50%);
+    }
+    .mmx-tip.mmx-left::after {
+      left: calc(100% + 2px);
+      top: 50%;
+    }
+    .mmx-tip.mmx-bottom {
+      transform: translate(-50%, 10px);
+    }
+    .mmx-tip.mmx-bottom::after {
+      top: -2px;
+      left: 50%;
+    }
+
+    @media (max-width: 640px) {
+      .pentabadge {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+      }
+      #materiality-matrix {
+        height: 460px;
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      // Helper: current language from localStorage('lang'), default 'en'
+      function getLang() {
+        const v = (localStorage.getItem('lang') || '').toLowerCase();
+        return v === 'ar' ? 'ar' : 'en';
+      }
+      function getLabel(it) {
+        return getLang() === 'ar' ? it.label_ar || it.label_en : it.label_en;
+      }
+      function setDirLang(el) {
+        const lang = getLang();
+        el.setAttribute('lang', lang);
+        el.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      }
+
+      // Data: use label_en / label_ar per item
+      const items = [
+        { id: 1, x: 22, y: 18, tone: 'teal', label_en: 'GHG Emissions', label_ar: 'انبعاثات الغازات الدفيئة' },
+        { id: 2, x: 45, y: 32, tone: 'teal', label_en: 'Energy Management', label_ar: 'إدارة الطاقة' },
+        { id: 3, x: 65, y: 22, tone: 'teal', label_en: 'Water Management', label_ar: 'إدارة المياه' },
+        { id: 4, x: 15, y: 38, tone: 'teal', label_en: 'Waste Management', label_ar: 'إدارة النفايات' },
+        { id: 5, x: 70, y: 30, tone: 'lime', label_en: 'Labor Management', label_ar: 'إدارة العمل' },
+        { id: 6, x: 95, y: 20, tone: 'lime', label_en: 'Occupational Health & Safety', label_ar: 'السلامة والصحة المهنية' },
+        { id: 7, x: 50, y: 26, tone: 'lime', label_en: 'Diversity & Inclusion', label_ar: 'التنوّع والشمول' },
+        { id: 8, x: 50, y: 38, tone: 'lime', label_en: 'Human Capital Development', label_ar: 'تطوير رأس المال البشري' },
+        { id: 9, x: 12, y: 78, tone: 'lime', label_en: 'Local Community Involvement', label_ar: 'المشاركة المجتمعية المحلية' },
+        { id: 10, x: 43, y: 60, tone: 'lime', label_en: 'Human Rights Assessment', label_ar: 'تقييم حقوق الإنسان' },
+        { id: 11, x: 70, y: 10, tone: 'lime', label_en: 'Products & Services', label_ar: 'المنتجات والخدمات' },
+        { id: 12, x: 95, y: 7, tone: 'lime', label_en: 'Customer Satisfaction', label_ar: 'رضا العملاء' },
+        { id: 13, x: 80, y: 30, tone: 'emerald', label_en: 'Governance & Business Ethics', label_ar: 'الحوكمة وأخلاقيات الأعمال' },
+        { id: 14, x: 75, y: 40, tone: 'emerald', label_en: 'Regulatory Compliance', label_ar: 'الامتثال التنظيمي' },
+        { id: 15, x: 90, y: 30, tone: 'emerald', label_en: 'Anti-Competitive Behavior', label_ar: 'السلوك المناهض للمنافسة' },
+        { id: 16, x: 86, y: 20, tone: 'emerald', label_en: 'Economic Performance', label_ar: 'الأداء الاقتصادي' },
+        { id: 17, x: 80, y: 9, tone: 'emerald', label_en: 'Data & Customer Privacy', label_ar: 'خصوصية البيانات والعملاء' },
+        { id: 18, x: 70, y: 70, tone: 'emerald', label_en: 'Responsible Investment', label_ar: 'الاستثمار المسؤول' },
+        { id: 19, x: 98, y: 30, tone: 'emerald', label_en: 'Risk Management', label_ar: 'إدارة المخاطر' },
+        { id: 20, x: 41, y: 40, tone: 'emerald', label_en: 'Digital Transformation', label_ar: 'التحول الرقمي' },
+      ];
+
+      const layer = document.getElementById('points-layer');
+      const tooltip = document.getElementById('mm-tooltip');
+      const tipText = document.getElementById('mm-tooltip-text');
+
+      const toneToClass = t => (t === 'teal' ? 'penta-teal' : t === 'lime' ? 'penta-lime' : 'penta-emerald');
+
+      function showTooltipFor(it) {
+        const label = getLabel(it);
+        tipText.textContent = label;
+        setDirLang(tooltip);
+
+        // Position & placement
+        tooltip.style.left = `calc(${it.x}% + 14px)`;
+        tooltip.style.top = `calc(${it.y}% - 14px)`;
+        tooltip.classList.remove('mmx-right', 'mmx-left', 'mmx-bottom');
+
+        const rect = layer.getBoundingClientRect();
+        const px = rect.left + (it.x / 100) * rect.width;
+        const py = rect.top + (it.y / 100) * rect.height;
+        const vw = window.innerWidth,
+          vh = window.innerHeight;
+
+        if (px > vw * 0.75) tooltip.classList.add('mmx-left');
+        else if (px < vw * 0.25) tooltip.classList.add('mmx-right');
+        if (py > vh * 0.75) tooltip.classList.add('mmx-bottom');
+
+        tooltip.classList.remove('invisible');
+        tooltip.style.opacity = '1';
+      }
+
+      function hideTooltip() {
+        tooltip.style.opacity = '0';
+        tooltip.classList.add('invisible');
+      }
+
+      // Build badges
+      items.forEach(it => {
+        const node = document.createElement('button');
+        node.type = 'button';
+        node.setAttribute('role', 'listitem');
+        node.className = 'absolute pentabadge focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 ' + toneToClass(it.tone);
+        node.style.left = it.x + '%';
+        node.style.top = it.y + '%';
+        node.textContent = it.id;
+
+        // ARIA label respects current language
+        node.setAttribute('aria-label', getLabel(it));
+
+        node.addEventListener('mouseenter', () => showTooltipFor(it));
+        node.addEventListener('focus', () => showTooltipFor(it));
+        node.addEventListener('mouseleave', hideTooltip);
+        node.addEventListener('blur', hideTooltip);
+        node.addEventListener('click', e => {
+          e.preventDefault();
+          // toggle on tap
+          if (tooltip.style.opacity === '1' && tipText.textContent === getLabel(it)) hideTooltip();
+          else showTooltipFor(it);
+        });
+
+        layer.appendChild(node);
+      });
+
+      // Update ARIA labels & tooltip direction when language changes externally
+      function refreshLang() {
+        setDirLang(tooltip);
+        const btns = layer.querySelectorAll('.pentabadge');
+        btns.forEach((btn, i) => btn.setAttribute('aria-label', getLabel(items[i])));
+        // If tooltip is open, refresh its text as well
+        if (tooltip.style.opacity === '1') {
+          const current = tipText.textContent;
+          const i = items.findIndex(it => getLabel(it) === current);
+          if (i >= 0) tipText.textContent = getLabel(items[i]);
+        }
+      }
+
+      // Listen to storage change (another tab) and a custom event (same tab toggler can dispatch)
+      window.addEventListener('storage', e => {
+        if (e.key === 'lang') refreshLang();
+      });
+      window.addEventListener('lang:changed', refreshLang);
+    })();
+  </script>
+</section>

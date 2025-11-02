@@ -1,0 +1,498 @@
+<!-- 
+	- i need in this page handle the seo meta ignore the meta information here and make something suitable based on the content in the page
+	- and put the attrbute data-i18n='key of this text' in ar.json and en.json as flat key page-name.key
+
+	- and also enhance teh page in the responsive 
+	- and add data-aos animation with pretty why 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Charset & Viewport -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary Meta -->
+    <title>Governance & Risk Management | Alandalus</title>
+    <meta name="description" content="Alandalus Property’s governance hub: board structure, anti-bribery & AML, risk management, audit & compliance, whistleblowing, inclusion, environmental governance, and sustainable procurement." />
+    <link rel="canonical" href="https://www.alandalus.com/governance" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#006337" />
+
+    <!-- i18n -->
+    <meta http-equiv="content-language" content="en" />
+    <link rel="alternate" href="https://www.alandalus.com/governance" hreflang="en" />
+    <link rel="alternate" href="https://www.alandalus.com/ar/governance" hreflang="ar" />
+    <link rel="alternate" href="https://www.alandalus.com/governance" hreflang="x-default" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Alandalus Property" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.alandalus.com/governance" />
+    <meta property="og:title" content="Governance & Risk Management | Alandalus" />
+    <meta property="og:description" content="Explore Alandalus’s governance: board leadership, anti-bribery, AML, audits, whistleblowing, inclusion, environmental governance, and sustainable procurement." />
+    <meta property="og:image" content="https://www.alandalus.com/imgs/governance/hero-poster.jpg" />
+    <meta property="og:image:alt" content="Alandalus governance — video hero poster" />
+    <meta property="og:video" content="https://www.alandalus.com/imgs/governance/hero.mp4" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Governance & Risk Management | Alandalus" />
+    <meta name="twitter:description" content="Board structure, risk & compliance, whistleblowing, inclusion, environmental governance, and sustainable procurement." />
+    <meta name="twitter:image" content="https://www.alandalus.com/imgs/governance/hero-poster.jpg" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Performance: Fonts, CSS, Media -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/imgs/governance/hero-poster.jpg" imagesizes="100vw" />
+    <link rel="preload" as="style" href="./index.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link href="./package/aos.css" rel="stylesheet" />
+    <script defer src="./package/tailwind.js"></script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.alandalus.com/#org",
+        "name": "Alandalus Property",
+        "url": "https://www.alandalus.com/",
+        "logo": "https://www.alandalus.com/logo.png",
+        "foundingLocation": "Saudi Arabia"
+      }
+    </script>
+
+    <!-- Structured Data: WebPage (Governance hub with Video) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.alandalus.com/governance#webpage",
+        "url": "https://www.alandalus.com/governance",
+        "name": "Governance & Risk Management",
+        "inLanguage": "en",
+        "description": "Governance hub: board structure, risk management, anti-bribery & AML, audit & compliance, whistleblowing, inclusion, environmental governance, and sustainable procurement.",
+        "isPartOf": { "@id": "https://www.alandalus.com/#website" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://www.alandalus.com/imgs/governance/hero-poster.jpg"
+        },
+        "video": {
+          "@type": "VideoObject",
+          "name": "Governance — Hero Background",
+          "thumbnailUrl": ["https://www.alandalus.com/imgs/governance/hero-poster.jpg"],
+          "contentUrl": "https://www.alandalus.com/imgs/governance/hero.mp4",
+          "uploadDate": "2025-11-01"
+        },
+        "about": [
+          { "@type": "Thing", "name": "Risk management" },
+          { "@type": "Thing", "name": "Anti-bribery & AML" },
+          { "@type": "Thing", "name": "Audit & compliance" },
+          { "@type": "Thing", "name": "Whistleblowing" },
+          { "@type": "Thing", "name": "Inclusion & equal pay" },
+          { "@type": "Thing", "name": "Environmental governance" },
+          { "@type": "Thing", "name": "Sustainable procurement" }
+        ],
+        "publisher": { "@id": "https://www.alandalus.com/#org" },
+        "datePublished": "2025-11-01",
+        "dateModified": "2025-11-01"
+      }
+    </script>
+
+    <!-- Structured Data: Breadcrumbs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alandalus.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Sustainability", "item": "https://www.alandalus.com/sustainability" },
+          { "@type": "ListItem", "position": 3, "name": "Governance", "item": "https://www.alandalus.com/governance" }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: ItemList (Governance Highlights) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Governance Highlights",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Thing", "name": "Risk Management", "description": "100% corruption risk assessed" } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Thing", "name": "Code of Conduct", "description": "Zero tolerance bribery" } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Thing", "name": "Audit & Compliance", "description": "Internal & external oversight" } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Thing", "name": "Anti-Bribery & AML" } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Thing", "name": "Whistleblowing", "description": "Confidential & protected channels" } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "Thing", "name": "HR & Inclusion" } },
+          { "@type": "ListItem", "position": 7, "item": { "@type": "Thing", "name": "Environmental Governance", "description": "Energy, Water, Waste policies" } },
+          { "@type": "ListItem", "position": 8, "item": { "@type": "Thing", "name": "Sustainable Procurement", "description": "30% with sustainability criteria; 86% local" } }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: ItemList (Board of Directors) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Board of Directors",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Person", "name": "Mr. Abdulsalam bin Abdulrahman Al-Aqeel", "jobTitle": "Chairman; Chair, Executive Committee; Member, Nominations & Remuneration" } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Person", "name": "Eng. Saleh bin Mohammed Al Habib", "jobTitle": "Vice Chairman" } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Person", "name": "Mr. Ahmed bin Abdulrahman Al Mousa", "jobTitle": "Board Member; Executive Committee" } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Person", "name": "Eng. Faisal bin Abdulmohsen Al Zakri", "jobTitle": "Board Member; Executive Committee" } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Person", "name": "Mr. Mishari bin Muslim Al Shaman", "jobTitle": "Board Member; Executive Committee" } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "Person", "name": "Eng. Faisal bin Abdulrahman Al Nasser", "jobTitle": "Board Member" } },
+          { "@type": "ListItem", "position": 7, "item": { "@type": "Person", "name": "Mr. Omar bin Hamad Al Meshal", "jobTitle": "Board Member; Executive Committee" } },
+          { "@type": "ListItem", "position": 8, "item": { "@type": "Person", "name": "Mr. Nawaf bin Abdullah Al Fozan", "jobTitle": "Board Member; Chair, Nominations & Remuneration" } },
+          { "@type": "ListItem", "position": 9, "item": { "@type": "Person", "name": "Mr. Tariq bin Saad Al Tuwaljri", "jobTitle": "Board Member" } }
+        ]
+      }
+    </script>
+  </head>
+
+  <body class="overflow-x-hidden text-slate-800 bg-white">
+    <div id="header"></div>
+    <script>
+      fetch('/components/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const mount = document.getElementById('header');
+          mount.innerHTML = html;
+          mount.querySelectorAll('script').forEach(s => {
+            const n = document.createElement('script');
+            n.textContent = s.textContent;
+            document.head.appendChild(n).remove();
+          });
+          // window.initStepsTimeline(mount);
+        })
+        .catch(err => console.error('Error loading steps:', err));
+    </script>
+
+    <section class="relative min-h-[90vh] md:min-h-[100vh] grid place-items-center overflow-hidden">
+      <!-- Media background -->
+      <div class="absolute inset-0 overflow-hidden">
+        <video autoplay muted loop playsinline preload="auto" poster="/imgs/governance/hero-poster.jpg" class="absolute inset-0 h-full w-full object-cover z-[-2]" aria-hidden="true">
+          <source src="/imgs/governance/hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Readability overlay (stronger on mobile) -->
+        <div class="absolute inset-0 z-[-1] bg-gradient-to-r from-[#1d1d1d]/90 via-[#1d1d1d]/60 to-[#1d1d1d]/20 md:from-[#1d1d1d]/80 md:via-[#1d1d1d]/40 md:to-transparent"></div>
+      </div>
+
+      <div class="container relative z-10 !py-16 md:!py-[200px] px-4 sm:px-6">
+        <div id="heroText" class="max-w-[1200px] md:max-w-[1300px] w-full text-white " data-animate="hero">
+          <!-- Title -->
+          <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" data-aos-easing="ease-out-cubic" class="max-lg:mt-[70px] leading-[0.98] tracking-tight mb-6 font-black text-[clamp(28px,7vw,44px)] sm:text-[clamp(36px,7vw,64px)] md:text-[clamp(60px,8vw,100px)]">
+            <span data-i18n="governance.hero.title">Governance &amp;<br />Risk Management</span>
+          </h1>
+
+          <!-- Body -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+            <p data-aos="fade-up" data-aos-delay="180" data-aos-duration="900" data-aos-easing="ease-out-cubic" class="text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed text-white/90 font-[500]" data-i18n="governance.hero.p1">In 2024, Alandalus Property Company reinforced its governance framework by strengthening risk management, compliance, and ethical practices across all operations. The Company conducted a comprehensive assessment of corruption risks, maintained a zero-tolerance approach to bribery, and implemented robust internal and external audit mechanisms. Policies and training programs were applied to anti-bribery, anti-money laundering, and whistleblowing processes, ensuring confidential and protected channels for reporting concerns.</p>
+
+            <p data-aos="fade-up" data-aos-delay="240" data-aos-duration="900" data-aos-easing="ease-out-cubic" class="text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed text-white/90 font-[500]" data-i18n="governance.hero.p2">Governance also extended to human resources and inclusion, promoting equal pay, a safe work environment, and fair labor practices. Environmental governance was integrated into operations through clear policies on energy, water, and waste management, while sustainable procurement practices were advanced, with 30% of purchases aligned with sustainability criteria and 86% sourced locally. These measures collectively demonstrate a culture of accountability, transparency, and responsible management.</p>
+          </div>
+
+          <!-- CTA -->
+          <a href="#board" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900" data-aos-easing="ease-out-cubic" class="mt-8 md:mt-12 !cursor-pointer inline-flex items-center gap-2 text-base md:text-xl border border-white rounded-2xl w-auto px-4 py-2 hover:bg-white hover:text-black group transition-colors duration-300" aria-label="Read More">
+            <span data-i18n="governance.cta.readMore">Read More</span>
+            <svg class="rtl:scale-x-[-1]" width="15" height="15" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path class="group-hover:fill-black" d="M10.4548 8.62304C10.9607 9.12894 10.9607 9.94918 10.4548 10.4551L2.21053 18.6993C1.70463 19.2052 0.884392 19.2052 0.378486 18.6993C-0.127422 18.1934 -0.127422 17.3732 0.378485 16.8673L7.70668 9.53906L0.378484 2.21087C-0.127423 1.70496 -0.127423 0.884723 0.378484 0.378816C0.88439 -0.12709 1.70463 -0.12709 2.21053 0.378816L10.4548 8.62304ZM8.68359 9.53906L8.68359 8.24361L9.53873 8.24361L9.53873 9.53906L9.53873 10.8345L8.68359 10.8345L8.68359 9.53906Z" fill="#fff" />
+              <path class="group-hover:fill-black" d="M18.1501 8.62304C18.656 9.12894 18.656 9.94918 18.1501 10.4551L9.90585 18.6993C9.39994 19.2052 8.5797 19.2052 8.0738 18.6993C7.56789 18.1934 7.56789 17.3732 8.0738 16.8673L15.402 9.53906L8.0738 2.21087C7.56789 1.70496 7.56789 0.884723 8.0738 0.378816C8.5797 -0.12709 9.39994 -0.12709 9.90585 0.378816L18.1501 8.62304ZM16.3789 9.53906L16.3789 8.24361L17.234 8.24361L17.234 9.53906L17.234 10.8345L16.3789 10.8345L16.3789 9.53906Z" fill="#fff" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="structure"></div>
+    <script>
+      fetch('/components/page-4/structure.html')
+        .then(r => r.text())
+        .then(html => {
+          const mount = document.getElementById('structure');
+          mount.innerHTML = html;
+          mount.querySelectorAll('script').forEach(s => {
+            const n = document.createElement('script');
+            n.textContent = s.textContent;
+            document.head.appendChild(n).remove();
+          });
+          // window.initStepsTimeline(mount);
+        })
+        .catch(err => console.error('Error loading steps:', err));
+    </script>
+
+    <section class="relative bg-white py-16 md:py-24 lg:py-28">
+      <svg class="pointer-events-none absolute right-0 top-[-20%] opacity-10 max-lg:hidden" width="468" height="2178" viewBox="0 0 468 2178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g opacity="0.05" clip-path="url(#clip0_928_3173)">
+          <path d="M260.002 901.227H208.002V938.781H260.002V901.227Z" fill="#0F0F0F" />
+          <path d="M52 37.5545L104 37.5545L104 75.1089H52L52 37.5545ZM312 0V75.1089L260 75.1089V0L208 0V75.1089H156V0L0 0L0 112.663L364 112.663V0L312 0Z" fill="#0F0F0F" />
+          <path d="M260 976.328H208V1013.88H260V976.328Z" fill="#0F0F0F" />
+          <path d="M52.0019 938.772H104.002L104.002 976.326H52.0019L52.0019 938.772ZM104.002 751.039V788.594H208.002V826.148H52.0019L52.0019 751.039H0.00195312L0.00195313 1089.03H52.0019L52.0019 1013.92H156.002L156.002 901.257H52.0019L52.0019 863.702H260.002V751.039H104.002Z" fill="#0F0F0F" />
+          <path d="M468.002 938.797H416.002V1089.01H468.002V938.797Z" fill="#0F0F0F" />
+          <path d="M468.002 0L416.002 0V112.663L468.002 112.663V0Z" fill="#0F0F0F" />
+          <path d="M52.0019 337.936H104.002L104.002 375.49H52.0019L52.0019 337.936ZM208.002 150.203V225.312H156.002V150.203H104.002L104.002 225.312H52.0019L52.0019 150.203H0.00195312L0.00195313 488.193H52.0019L52.0019 413.084H156.002L156.002 300.381H52.0019L52.0019 262.827L260.002 262.827V187.718H364.002V150.203L208.002 150.203Z" fill="#0F0F0F" />
+          <path d="M416.002 675.957L416.002 863.69H312.002L312.002 1051.46H104.002L104.002 1089.02H364.002V901.244H468.002L468.002 675.957L416.002 675.957Z" fill="#0F0F0F" />
+          <path d="M364.002 225.328H312.002V262.883H364.002V225.328Z" fill="#0F0F0F" />
+          <path d="M156 450.613H104V488.168H156V450.613Z" fill="#0F0F0F" />
+          <path d="M260 488.163H312V525.717H260V488.163ZM208 300.391V337.945H312V375.5L208 375.5L208 525.717H104L104 600.826H52L52 525.717H0L0 638.381H156V563.272H364L364 450.609H260V413.054H364V300.391H208Z" fill="#0F0F0F" />
+          <path d="M416.002 150.203L416.002 600.817H208.002V675.926H0.00195313L0.00195313 713.48H260.002L260.002 638.371H468.002L468.002 150.203L416.002 150.203Z" fill="#0F0F0F" />
+          <path d="M364.002 675.957H312.002V826.175H364.002V675.957Z" fill="#0F0F0F" />
+        </g>
+        <g opacity="0.05" clip-path="url(#clip1_928_3173)">
+          <path d="M260.002 1990.23H208.002V2027.78H260.002V1990.23Z" fill="#0F0F0F" />
+          <path d="M52 1126.55H104L104 1164.11H52L52 1126.55ZM312 1089V1164.11H260V1089H208V1164.11H156V1089H0L0 1201.66H364V1089H312Z" fill="#0F0F0F" />
+          <path d="M260 2065.33H208V2102.88H260V2065.33Z" fill="#0F0F0F" />
+          <path d="M52.0019 2027.77H104.002L104.002 2065.33H52.0019L52.0019 2027.77ZM104.002 1840.04V1877.59H208.002V1915.15H52.0019L52.0019 1840.04H0.00195312L0.00195313 2178.03H52.0019L52.0019 2102.92H156.002L156.002 1990.26H52.0019L52.0019 1952.7H260.002V1840.04H104.002Z" fill="#0F0F0F" />
+          <path d="M468.002 2027.8H416.002V2178.01H468.002V2027.8Z" fill="#0F0F0F" />
+          <path d="M468.002 1089H416.002V1201.66H468.002V1089Z" fill="#0F0F0F" />
+          <path d="M52.0019 1426.94H104.002L104.002 1464.49H52.0019L52.0019 1426.94ZM208.002 1239.2V1314.31H156.002V1239.2H104.002L104.002 1314.31H52.0019L52.0019 1239.2H0.00195312L0.00195313 1577.19H52.0019L52.0019 1502.08H156.002L156.002 1389.38H52.0019L52.0019 1351.83H260.002V1276.72H364.002V1239.2H208.002Z" fill="#0F0F0F" />
+          <path d="M416.002 1764.96L416.002 1952.69H312.002L312.002 2140.46H104.002L104.002 2178.02H364.002V1990.24H468.002L468.002 1764.96H416.002Z" fill="#0F0F0F" />
+          <path d="M364.002 1314.33H312.002V1351.88H364.002V1314.33Z" fill="#0F0F0F" />
+          <path d="M156 1539.61H104V1577.17H156V1539.61Z" fill="#0F0F0F" />
+          <path d="M260 1577.16H312V1614.72H260V1577.16ZM208 1389.39V1426.95H312V1464.5H208L208 1614.72H104L104 1689.83H52L52 1614.72H0L0 1727.38H156V1652.27H364L364 1539.61H260V1502.05H364V1389.39H208Z" fill="#0F0F0F" />
+          <path d="M416.002 1239.2L416.002 1689.82H208.002V1764.93H0.00195313L0.00195313 1802.48H260.002L260.002 1727.37H468.002L468.002 1239.2H416.002Z" fill="#0F0F0F" />
+          <path d="M364.002 1764.96H312.002V1915.17H364.002V1764.96Z" fill="#0F0F0F" />
+        </g>
+        <defs>
+          <clipPath id="clip0_928_3173"><rect width="468" height="1089" fill="white" /></clipPath>
+          <clipPath id="clip1_928_3173"><rect width="468" height="1089" fill="white" transform="translate(0 1089)" /></clipPath>
+        </defs>
+      </svg>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 flex flex-row items-center justify-between gap-2 sm:gap-6">
+          <h2 data-i18n="governance.board.title" data-aos="fade-right" class="text-[28px] sm:text-[34px] font-semibold text-[#006337]">Board Of Directors</h2>
+
+          <div data-aos="fade-left" class="max-md:hidden cursor-pointer bg-[#006337] text-white hover:bg-[#075f2f] transition-all duration-300 flex items-center gap-2 text-lg sm:text-xl border border-[#006337] rounded-2xl w-fit px-4 py-2">
+            <a href="#read-more" data-i18n="governance.board.readMore" class=""> Read More </a>
+            <img src="./imgs/arrow.svg" class="rtl:scale-x-[-1] w-4 flex-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          <!-- Member 1 -->
+          <div data-aos="zoom-in-up" data-aos-delay="0" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/3.png" alt="Mr. Abdulsalam bin Abdulrahman Al-Aqeel" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member1.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Abdulsalam bin<br />Abdulrahman Al-Aqeel</h3>
+            <p data-i18n="governance.board.member1.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Chairman of the board; Chairman of the executive committee; Member of the nominations & remuneration committee</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 2 -->
+          <div data-aos="zoom-in-up" data-aos-delay="50" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/2.png" alt="Eng. Saleh bin Mohammed Al Habib" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member2.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Eng. Saleh bin<br />Mohammed Al Habib</h3>
+            <p data-i18n="governance.board.member2.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Vice chairman of the board</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 3 -->
+          <div data-aos="zoom-in-up" data-aos-delay="100" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/1.png" alt="Mr. Ahmed bin Abdulrahman Al Mousa" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member3.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Ahmed bin<br />Abdulrahman Al Mousa</h3>
+            <p data-i18n="governance.board.member3.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 4 -->
+          <div data-aos="zoom-in-up" data-aos-delay="150" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/6.png" alt="Eng. Faisal bin Abdulmohsen Al Zakri" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member4.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Eng. Faisal bin<br />Abdulmohsen Al Zakri</h3>
+            <p data-i18n="governance.board.member4.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 5 -->
+          <div data-aos="zoom-in-up" data-aos-delay="200" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/5.png" alt="Mr. Mishari bin Muslim Al Shaman" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member5.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Mishari bin<br />Muslim Al Shaman</h3>
+            <p data-i18n="governance.board.member5.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 6 -->
+          <div data-aos="zoom-in-up" data-aos-delay="250" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/4.png" alt="Eng. Faisal bin Abdulrahman Al Nasser" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member6.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Eng. Faisal bin<br />Abdulrahman Al Nasser</h3>
+            <p data-i18n="governance.board.member6.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 7 -->
+          <div data-aos="zoom-in-up" data-aos-delay="300" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/9.png" alt="Mr. Omar bin Hamad Al Meshal" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member7.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Omar bin<br />Hamad Al Meshal</h3>
+            <p data-i18n="governance.board.member7.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 8 -->
+          <div data-aos="zoom-in-up" data-aos-delay="350" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/8.png" alt="Mr. Nawaf bin Abdullah Al Fozan" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member8.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Nawaf bin<br />Abdullah Al Fozan</h3>
+            <p data-i18n="governance.board.member8.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Chairman of the nominations & remuneration committee; Board member</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+
+          <!-- Member 9 -->
+          <div data-aos="zoom-in-up" data-aos-delay="400" class="text-center">
+            <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
+              <img src="/imgs/board/7.png" alt="Mr. Tariq bin Saad Al Tuwaljri" class="object-contain w-full" />
+            </div>
+            <h3 data-i18n="governance.board.member9.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Tariq bin<br />Saad Al Tuwaljri</h3>
+            <p data-i18n="governance.board.member9.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member</p>
+            <div class="mx-auto mt-4 h-3 w-40 sm:w-48 rounded-full bg-black/10 blur-[6px] opacity-20"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sustainabilityStrategy" class="relative py-16 md:py-[120px] overflow-hidden">
+      <div class="absolute inset-0 bg-[#006337] -z-10 backdrop-blur-[34px]"></div>
+
+      <!-- Decorative frames -->
+      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] left-3 top-3" alt="" />
+      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] right-3 top-3 scale-x-[-1]" alt="" />
+      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] right-3 bottom-3 scale-[-1]" alt="" />
+      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] left-3 bottom-3 scale-y-[-1]" alt="" />
+
+      <div class="container relative text-white px-4 sm:px-6 lg:px-[60px]">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <h2 data-aos="fade-up" class="text-2xl md:text-3xl font-semibold tracking-wide uppercase" data-i18n="governance.strategy.title">Governance Highlights</h2>
+
+          <a data-aos="fade-up" data-aos-easing="ease-out-cubic" class="max-md:hidden !cursor-pointer inline-flex items-center gap-2 text-base md:text-xl border border-white rounded-2xl w-auto px-4 py-2 hover:bg-white hover:text-black group transition-colors duration-300" aria-label="Read More">
+            <span data-i18n="governance.cta.readMore">Read More</span>
+            <svg class="rtl:scale-x-[-1]" width="15" height="15" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path class="group-hover:fill-black" d="M10.4548 8.62304C10.9607 9.12894 10.9607 9.94918 10.4548 10.4551L2.21053 18.6993C1.70463 19.2052 0.884392 19.2052 0.378486 18.6993C-0.127422 18.1934 -0.127422 17.3732 0.378485 16.8673L7.70668 9.53906L0.378484 2.21087C-0.127423 1.70496 -0.127423 0.884723 0.378484 0.378816C0.88439 -0.12709 1.70463 -0.12709 2.21053 0.378816L10.4548 8.62304ZM8.68359 9.53906L8.68359 8.24361L9.53873 8.24361L9.53873 9.53906L9.53873 10.8345L8.68359 10.8345L8.68359 9.53906Z" fill="#fff" />
+              <path class="group-hover:fill-black" d="M18.1501 8.62304C18.656 9.12894 18.656 9.94918 18.1501 10.4551L9.90585 18.6993C9.39994 19.2052 8.5797 19.2052 8.0738 18.6993C7.56789 18.1934 7.56789 17.3732 8.0738 16.8673L15.402 9.53906L8.0738 2.21087C7.56789 1.70496 7.56789 0.884723 8.0738 0.378816C8.5797 -0.12709 9.39994 -0.12709 9.90585 0.378816L18.1501 8.62304ZM16.3789 9.53906L16.3789 8.24361L17.234 8.24361L17.234 9.53906L17.234 10.8345L16.3789 10.8345L16.3789 9.53906Z" fill="#fff" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-4 md:mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-white/90 leading-7">
+          <p data-aos="fade-up" data-i18n="governance.strategy.description">Through these initiatives, Alandalus Property demonstrates a long-term focus on upholding the highest standards of corporate governance, ethical conduct, and regulatory compliance. By embedding sustainability and risk management into its governance framework, the Company ensures operational integrity, stakeholder trust, and long-term resilience. These efforts increase the Company’s ability to drive responsible growth while fostering a culture of transparency, accountability, and sustainability across its operations.</p>
+        </div>
+
+        <h3 data-aos="fade-up" data-aos-delay="100" class="mt-16 mb-10 text-xl md:text-2xl font-semibold" data-i18n="governance.strategy.goalsTitle">Primary Goals</h3>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-12">
+          <!-- Cards -->
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/1.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal1.title">Risk Management</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal1.desc">100% Corruption Risk Assessed</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="50">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/2.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal2.title">Code Of Conduct</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal2.desc">Zero Tolerance Bribery</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/3.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal3.title">Audit & Compliance</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal3.desc">Internal & External Oversight</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="150">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/4.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal4.title">Anti-Bribery & AML</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal4.desc">Anti-Bribery & AML</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="200">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/5.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal5.title">Whistleblowing</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal5.desc">Confidential & Protected Channels</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="250">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/6.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal6.title">HR & Inclusion</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal6.desc">HR & Inclusion</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="300">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/7.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal7.title">Environmental Governance</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal7.desc">Energy, Water, Waste Policies</p>
+          </div>
+
+          <div class="group relative rounded-2xl border border-white/70 bg-transparent p-6 text-white text-center" data-aos="zoom-in-up" data-aos-delay="350">
+            <div class="w-[80px] h-[80px] rounded-full flex items-center justify-center relative mt-[-54px] bg-[#006337] border border-white mx-auto">
+              <img src="./imgs/governance/8.png" class="w-[40px] object-contain" alt="" />
+            </div>
+            <h3 class="mt-6 text-[18px] font-semibold leading-tight" data-i18n="governance.strategy.goal8.title">Sustainable Procurement</h3>
+            <p class="mt-1 text-[13px] text-white/80" data-i18n="governance.strategy.goal8.desc">30% With Sustainability; 86% Local</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+    <script>
+      fetch('/components/page-4/footer.htm')
+        .then(r => r.text())
+        .then(html => {
+          const mount = document.getElementById('footer');
+          mount.innerHTML = html;
+
+          mount.querySelectorAll('script').forEach(s => {
+            const n = document.createElement('script');
+            n.textContent = s.textContent;
+            document.head.appendChild(n).remove();
+          });
+        })
+        .catch(err => console.error('Error loading steps:', err));
+    </script>
+
+    <!-- App JS -->
+
+    <script src="./package/aos.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

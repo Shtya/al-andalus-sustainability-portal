@@ -1,0 +1,291 @@
+<style>
+  :root {
+    --tlx-spine: 12px;
+    --tlx-brand: #006337;
+    --tlx-spine-bg: rgb(229 231 235);
+    --tlx-text-muted: #5d5d5d;
+  }
+
+  /* ===== Layout (namespaced) ===== */
+  .tlx-wrap {
+    width: min(1000px, 92vw);
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .tlx-spinebar {
+    position: absolute;
+    inset-block: 0;
+    inline-size: var(--tlx-spine);
+    border-radius: 9999px;
+    background: var(--tlx-spine-bg);
+    inset-inline-start: 50%;
+  }
+
+  .tlx-step {
+    position: relative;
+  }
+  .tlx-step.tlx-in-view {
+    opacity: 1;
+  }
+
+  .tlx-vline {
+    position: absolute;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 10px 10px 0 0;
+    z-index: 1;
+    width: var(--tlx-spine);
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .tlx-vline::after {
+    content: '';
+    position: absolute;
+    background: var(--tlx-brand);
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: height 1s ease;
+  }
+  .tlx-step.tlx-filling .tlx-vline::after {
+    height: 100% !important;
+  }
+
+  .tlx-reveal {
+    opacity: 0;
+    transition: opacity 0.4s ease 0.15s;
+  }
+  .tlx-step.tlx-in-view .tlx-reveal {
+    opacity: 1;
+  }
+
+  /* Highlight the step closest to viewport center */
+  .tlx-step.tlx-active .tlx-title {
+    margin-block-start: -6px;
+    color: #0f0f0f;
+    transition: margin 0.3s ease, color 0.3s ease;
+  }
+
+  /* Left / Right placement (desktop) */
+  .tlx-left {
+    width: 50%;
+    margin-inline-start: auto;
+    padding: 0 3rem 3rem 3rem;
+  }
+  .tlx-right {
+    width: 50%;
+    margin-inline-end: auto;
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  .tlx-left .tlx-vline {
+    inset-inline-start: 0px;
+    border-radius: 10px 10px 0 0;
+  }
+  .tlx-right .tlx-vline {
+    right: -12px;
+    left: unset;
+    border-radius: 10px 10px 0 0;
+  }
+
+  html[dir='rtl'] .tlx-left .tlx-vline {
+    inset-inline-end: -17px;
+  }
+  html[dir='rtl'] .tlx-right .tlx-vline {
+    inset-inline-start: 100%;
+  }
+
+  /* Last step rounded bottom */
+  .tlx-step:last-child.tlx-left .tlx-vline,
+  .tlx-step:last-child.tlx-right .tlx-vline {
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* Typography helpers */
+  .tlx-number {
+    font-variant-numeric: tabular-nums;
+  }
+  .tlx-muted {
+    color: var(--tlx-text-muted);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1024px) {
+    .tlx-spinebar {
+      inset-inline-start: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    .tlx-spinebar {
+      inset-inline-start: -5px; /* keeps spine visible left */
+    }
+    .tlx-left,
+    .tlx-right,
+    .tlx-step {
+      width: 100% !important;
+      padding: 0 1rem 2rem 3rem; /* room for spine */
+    }
+    html[dir='rtl'] .tlx-left .tlx-vline,
+    html[dir='rtl'] .tlx-right .tlx-vline {
+      inset-inline-start: -5px !important;
+    }
+		html[dir='ltr'] .tlx-left .tlx-vline,
+    html[dir='ltr'] .tlx-right .tlx-vline {
+      inset-inline-start: -4px !important;
+    }
+
+
+    .tlx-hero-art {
+      display: none; /* hide big side art on phones */
+    }
+    .tlx-kicker {
+      left: 32px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .tlx-step,
+    .tlx-reveal {
+      transition: none !important;
+    }
+    .tlx-vline::after {
+      top: 0 !important;
+    }
+  }
+</style>
+
+<section class="relative !py-[150px]" data-tlx-timeline aria-labelledby="tlx-timeline-title">
+  <!-- Optional side art (decorative) -->
+  <img src="/imgs/sec-3.png" alt="" aria-hidden="true" class="tlx-hero-art pointer-events-none select-none absolute left-0 top-0 w-[300px] h-full object-contain" loading="lazy" />
+
+  <div class="tlx-wrap">
+    <h2 id="tlx-timeline-title" class="sr-only">Sustainability Pillars Timeline</h2>
+
+    <!-- Center spine -->
+    <span class="tlx-spinebar" aria-hidden="true"></span>
+
+    <!-- === Step 1 === -->
+    <div class="tlx-step tlx-left">
+      <span class="tlx-vline"></span>
+      <div class="tlx-reveal">
+        <p data-i18n="home.timeline.section6.title1" class="text-[22px] tlx-muted font-[500]">Spaces, programs, and engagement that invite community participation and shared value.</p>
+				<div class="flex items-center gap-2 mt-3 " >
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/1.png" />
+				</div>
+      </div>
+    </div>
+
+    <!-- === Step 2 === -->
+    <div class="tlx-step tlx-right">
+      <span class="tlx-vline !rounded-none"></span>
+      <div class="tlx-reveal">
+        <p data-i18n="home.timeline.section6.title2" class="text-[22px] tlx-muted font-[500]">Efficiency, waste reduction, water stewardship, and biodiversity safeguards across operations.</p>
+				<div class="flex items-center gap-2 mt-3 " >
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/2.png" />
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/3.png" />
+				</div>
+      </div>
+    </div>
+
+    <!-- === Step 3 === -->
+    <div class="tlx-step tlx-left">
+      <span class="tlx-vline !rounded-none"></span>
+      <div class="tlx-reveal">
+        <p data-i18n="home.timeline.section6.title3" class="text-[22px] tlx-muted font-[500]">Robust HSE systems, wellness programs, and a safe workplace culture.</p>
+				<div class="flex items-center gap-2 mt-3 " >
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/4.png" />
+				</div>
+      </div>
+    </div>
+
+    <!-- === Step 4 === -->
+    <div class="tlx-step tlx-right">
+      <span class="tlx-vline !rounded-none"></span>
+      <div class="tlx-reveal">
+        <p data-i18n="home.timeline.section6.title4" class="text-[22px] tlx-muted font-[500]">Fair opportunities, representation, and inclusive leadership pathways.</p>
+				<div class="flex items-center gap-2 mt-3 " >
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/5.png" />
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/6.png" />
+				</div>
+      </div>
+    </div>
+
+    <!-- === Step 5 === -->
+    <div class="tlx-step tlx-left">
+      <span class="tlx-vline"></span>
+      <div class="tlx-reveal">
+        <p data-i18n="home.timeline.section6.title5" class="text-[22px] tlx-muted font-[500]">Governance, risk management, and ongoing adherence to standards to future-proof growth.</p>
+				<div class="flex items-center gap-2 mt-3 " >
+					<img class="w-[80px]" alt="" src="../imgs/sec-5/7.png" />
+				</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ===== Namespaced timeline logic =====
+  const tlxSection = document.querySelector('[data-tlx-timeline]');
+  const tlxSteps = Array.from(tlxSection.querySelectorAll('.tlx-step'));
+
+  const TLX_LINE_ANIM_MS = 1000;
+  const TLX_STAGGER_MS = 50;
+
+  const tlxIndexOf = new Map(tlxSteps.map((el, i) => [el, i]));
+  let tlxQueue = [];
+  let tlxRunning = false;
+
+  function tlxEnqueue(step) {
+    if (step.classList.contains('tlx-played')) return;
+    if (tlxQueue.includes(step)) return;
+    tlxQueue.push(step);
+    tlxQueue.sort((a, b) => tlxIndexOf.get(a) - tlxIndexOf.get(b));
+    if (!tlxRunning) tlxRunQueue();
+  }
+
+  function tlxRunQueue() {
+    if (tlxQueue.length === 0) {
+      tlxRunning = false;
+      return;
+    }
+    tlxRunning = true;
+    const step = tlxQueue.shift();
+    step.classList.add('tlx-in-view', 'tlx-filling', 'tlx-played');
+    setTimeout(tlxRunQueue, TLX_LINE_ANIM_MS + TLX_STAGGER_MS);
+  }
+
+  const tlxIo = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) tlxEnqueue(entry.target);
+      });
+    },
+    { threshold: window.matchMedia('(max-width: 768px)').matches ? 0.2 : 0.35 },
+  );
+  tlxSteps.forEach(s => tlxIo.observe(s));
+
+  // Mark the step nearest to viewport center as active
+  function tlxUpdateActive() {
+    const mid = innerHeight / 2;
+    let best = null,
+      dist = Infinity;
+    tlxSteps.forEach(s => {
+      const r = s.getBoundingClientRect();
+      const c = r.top + r.height / 2;
+      const d = Math.abs(c - mid);
+      if (d < dist) {
+        dist = d;
+        best = s;
+      }
+    });
+    tlxSteps.forEach(s => s.classList.toggle('tlx-active', s === best));
+  }
+  addEventListener('scroll', tlxUpdateActive, { passive: true });
+  addEventListener('resize', tlxUpdateActive);
+  tlxUpdateActive();
+</script>
