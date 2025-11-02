@@ -135,7 +135,7 @@
   <body class="overflow-x-hidden text-slate-800 bg-white">
     <div id="header"></div>
     <script>
-      fetch('/components/header.html')
+      fetch('./components/header.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('header');
