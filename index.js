@@ -29,7 +29,7 @@ let currentLang = getSavedLang();
 // ---------- i18n helpers ----------
 async function fetchDict(lang) {
   const safe = SUPPORTED.includes(lang) ? lang : FALLBACK;
-  const res = await fetch(`/i18n/${safe}.json`, { cache: 'no-cache' });
+  const res = await fetch(`./i18n/${safe}.json`, { cache: 'no-cache' });
   if (!res.ok) throw new Error(`Failed to load i18n ${safe}`);
   return res.json();
 }
@@ -148,8 +148,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateLangUI(currentLang);
   await setLanguage(currentLang, { initialLoad: true });
 
-  // NOW init AOS (after i18n/layout is painted)
-  // NOTE: remove any earlier AOS.init calls in your code.
   window.AOS?.init({
     duration: 800,
     once: true, // replay when re-entering viewport
