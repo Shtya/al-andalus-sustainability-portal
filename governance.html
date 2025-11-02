@@ -44,15 +44,15 @@
     <meta name="twitter:image" content="https://www.alandalus.com/imgs/governance/hero-poster.jpg" />
 
     <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 
     <!-- Performance: Fonts, CSS, Media -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/imgs/governance/hero-poster.jpg" imagesizes="100vw" />
+    <link rel="preload" as="image" href="./imgs/governance/hero-poster.jpg" imagesizes="100vw" />
     <link rel="preload" as="style" href="./index.css" />
     <link rel="stylesheet" href="./index.css" />
     <link href="./package/aos.css" rel="stylesheet" />
@@ -164,7 +164,7 @@
   <body class="overflow-x-hidden text-slate-800 bg-white">
     <div id="header"></div>
     <script>
-      fetch('/components/header.html')
+      fetch('./components/header.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('header');
@@ -182,8 +182,8 @@
     <section class="relative min-h-[90vh] md:min-h-[100vh] grid place-items-center overflow-hidden">
       <!-- Media background -->
       <div class="absolute inset-0 overflow-hidden">
-        <video autoplay muted loop playsinline preload="auto" poster="/imgs/governance/hero-poster.jpg" class="absolute inset-0 h-full w-full object-cover z-[-2]" aria-hidden="true">
-          <source src="/imgs/governance/hero.mp4" type="video/mp4" />
+        <video autoplay muted loop playsinline preload="auto" poster="./imgs/governance/hero-poster.jpg" class="absolute inset-0 h-full w-full object-cover z-[-2]" aria-hidden="true">
+          <source src="./imgs/governance/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -219,7 +219,7 @@
 
     <div id="structure"></div>
     <script>
-      fetch('/components/page-4/structure.html')
+      fetch('./components/page-4/structure.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('structure');
@@ -286,7 +286,7 @@
           <!-- Member 1 -->
           <div data-aos="zoom-in-up" data-aos-delay="0" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/3.png" alt="Mr. Abdulsalam bin Abdulrahman Al-Aqeel" class="object-contain w-full" />
+              <img src="./imgs/board/3.png" alt="Mr. Abdulsalam bin Abdulrahman Al-Aqeel" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member1.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Abdulsalam bin<br />Abdulrahman Al-Aqeel</h3>
             <p data-i18n="governance.board.member1.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Chairman of the board; Chairman of the executive committee; Member of the nominations & remuneration committee</p>
@@ -296,7 +296,7 @@
           <!-- Member 2 -->
           <div data-aos="zoom-in-up" data-aos-delay="50" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/2.png" alt="Eng. Saleh bin Mohammed Al Habib" class="object-contain w-full" />
+              <img src="./imgs/board/2.png" alt="Eng. Saleh bin Mohammed Al Habib" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member2.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Eng. Saleh bin<br />Mohammed Al Habib</h3>
             <p data-i18n="governance.board.member2.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Vice chairman of the board</p>
@@ -306,7 +306,7 @@
           <!-- Member 3 -->
           <div data-aos="zoom-in-up" data-aos-delay="100" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/1.png" alt="Mr. Ahmed bin Abdulrahman Al Mousa" class="object-contain w-full" />
+              <img src="./imgs/board/1.png" alt="Mr. Ahmed bin Abdulrahman Al Mousa" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member3.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Ahmed bin<br />Abdulrahman Al Mousa</h3>
             <p data-i18n="governance.board.member3.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
@@ -316,7 +316,7 @@
           <!-- Member 4 -->
           <div data-aos="zoom-in-up" data-aos-delay="150" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/6.png" alt="Eng. Faisal bin Abdulmohsen Al Zakri" class="object-contain w-full" />
+              <img src="./imgs/board/6.png" alt="Eng. Faisal bin Abdulmohsen Al Zakri" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member4.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Eng. Faisal bin<br />Abdulmohsen Al Zakri</h3>
             <p data-i18n="governance.board.member4.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
@@ -326,7 +326,7 @@
           <!-- Member 5 -->
           <div data-aos="zoom-in-up" data-aos-delay="200" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/5.png" alt="Mr. Mishari bin Muslim Al Shaman" class="object-contain w-full" />
+              <img src="./imgs/board/5.png" alt="Mr. Mishari bin Muslim Al Shaman" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member5.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Mishari bin<br />Muslim Al Shaman</h3>
             <p data-i18n="governance.board.member5.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
@@ -336,7 +336,7 @@
           <!-- Member 6 -->
           <div data-aos="zoom-in-up" data-aos-delay="250" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/4.png" alt="Eng. Faisal bin Abdulrahman Al Nasser" class="object-contain w-full" />
+              <img src="./imgs/board/4.png" alt="Eng. Faisal bin Abdulrahman Al Nasser" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member6.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Eng. Faisal bin<br />Abdulrahman Al Nasser</h3>
             <p data-i18n="governance.board.member6.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member</p>
@@ -346,7 +346,7 @@
           <!-- Member 7 -->
           <div data-aos="zoom-in-up" data-aos-delay="300" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/9.png" alt="Mr. Omar bin Hamad Al Meshal" class="object-contain w-full" />
+              <img src="./imgs/board/9.png" alt="Mr. Omar bin Hamad Al Meshal" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member7.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Omar bin<br />Hamad Al Meshal</h3>
             <p data-i18n="governance.board.member7.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member; Member of the executive committee</p>
@@ -356,7 +356,7 @@
           <!-- Member 8 -->
           <div data-aos="zoom-in-up" data-aos-delay="350" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/8.png" alt="Mr. Nawaf bin Abdullah Al Fozan" class="object-contain w-full" />
+              <img src="./imgs/board/8.png" alt="Mr. Nawaf bin Abdullah Al Fozan" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member8.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Nawaf bin<br />Abdullah Al Fozan</h3>
             <p data-i18n="governance.board.member8.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Chairman of the nominations & remuneration committee; Board member</p>
@@ -366,7 +366,7 @@
           <!-- Member 9 -->
           <div data-aos="zoom-in-up" data-aos-delay="400" class="text-center">
             <div class="mx-auto w-[240px] sm:w-[300px] md:w-[350px] relative">
-              <img src="/imgs/board/7.png" alt="Mr. Tariq bin Saad Al Tuwaljri" class="object-contain w-full" />
+              <img src="./imgs/board/7.png" alt="Mr. Tariq bin Saad Al Tuwaljri" class="object-contain w-full" />
             </div>
             <h3 data-i18n="governance.board.member9.name" class="text-[20px] sm:text-[22px] font-semibold text-[#1f2937] leading-tight mt-3">Mr. Tariq bin<br />Saad Al Tuwaljri</h3>
             <p data-i18n="governance.board.member9.role" class="mt-1 text-[15px] sm:text-[16px] leading-snug text-slate-800 font-[500]">Board member</p>
@@ -380,10 +380,10 @@
       <div class="absolute inset-0 bg-[#006337] -z-10 backdrop-blur-[34px]"></div>
 
       <!-- Decorative frames -->
-      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] left-3 top-3" alt="" />
-      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] right-3 top-3 scale-x-[-1]" alt="" />
-      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] right-3 bottom-3 scale-[-1]" alt="" />
-      <img src="/imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] left-3 bottom-3 scale-y-[-1]" alt="" />
+      <img src="./imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] left-3 top-3" alt="" />
+      <img src="./imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] right-3 top-3 scale-x-[-1]" alt="" />
+      <img src="./imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] right-3 bottom-3 scale-[-1]" alt="" />
+      <img src="./imgs/frame.svg" class="max-md:hidden absolute opacity-30 w-[160px] md:w-[200px] lg:w-[240px] left-3 bottom-3 scale-y-[-1]" alt="" />
 
       <div class="container relative text-white px-4 sm:px-6 lg:px-[60px]">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
@@ -475,7 +475,7 @@
 
     <div id="footer"></div>
     <script>
-      fetch('/components/page-4/footer.htm')
+      fetch('./components/page-4/footer.htm')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('footer');

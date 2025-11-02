@@ -27,16 +27,16 @@
     <meta property="og:image:alt" content="Alandalus social responsibility — community health and education initiatives" />
 
     <!-- Icons (replace with your real paths) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta name="theme-color" content="#006337" />
 
     <!-- Performance: fonts & critical media -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/imgs/social/hero.jpg" imagesrcset="/imgs/social/hero.jpg 1200w" imagesizes="(min-width: 1024px) 960px, 100vw" />
+    <link rel="preload" as="image" href="./imgs/social/hero.jpg" imagesrcset="./imgs/social/hero.jpg 1200w" imagesizes="(min-width: 1024px) 960px, 100vw" />
     <link rel="preload" as="style" href="./index.css" />
     <link rel="stylesheet" href="./index.css" />
     <link href="./package/aos.css" rel="stylesheet" />
@@ -154,7 +154,7 @@
   <body class="antialiased text-slate-800 overflow-x-hidden">
     <div id="header"></div>
     <script>
-      fetch('/components/header.html')
+      fetch('./components/header.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('header');
@@ -214,7 +214,7 @@
 
           <!-- Right: visual -->
           <figure class="relative">
-            <img data-aos="zoom-out" data-aos-delay="80" src="/imgs/social/hero.jpg" alt="Aerial view of city roads and green areas" class="w-full h-[520px] sm:h-[560px] lg:h-[700px] rounded-2xl object-cover ring-1 ring-black/5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)]" />
+            <img data-aos="zoom-out" data-aos-delay="80" src="./imgs/social/hero.jpg" alt="Aerial view of city roads and green areas" class="w-full h-[520px] sm:h-[560px] lg:h-[700px] rounded-2xl object-cover ring-1 ring-black/5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)]" />
 
             <span class="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-transparent to-white/5"></span>
           </figure>

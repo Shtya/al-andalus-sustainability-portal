@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/imgs/environment/hero.png" imagesizes="100vw" />
+    <link rel="preload" as="image" href="./imgs/environment/hero.png" imagesizes="100vw" />
     <link rel="stylesheet" href="./index.css" />
     <link href="./package/aos.css" rel="stylesheet" />
     <script defer src="./package/tailwind.js"></script>
@@ -96,7 +96,7 @@
   <body class="antialiased text-slate-800 bg-white">
     <div id="header"></div>
     <script>
-      fetch('/components/header.html')
+      fetch('./components/header.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('header');
@@ -115,7 +115,7 @@
       <div class="absolute inset-0 h-full w-full grid grid-cols-1 md:grid-cols-[520px_1fr] lg:grid-cols-[600px_1fr]">
         <div class="hidden md:block w-full h-full bg-white"></div>
 
-        <img data-aos="fade-up" src="/imgs/environment/hero.png" alt="" data-i18n="environment.hero.img_alt" class="w-full h-[46vh] sm:h-[56vh] md:h-full object-cover" loading="lazy" decoding="async" />
+        <img data-aos="fade-up" src="./imgs/environment/hero.png" alt="" data-i18n="environment.hero.img_alt" class="w-full h-[46vh] sm:h-[56vh] md:h-full object-cover" loading="lazy" decoding="async" />
       </div>
 
       <!-- Content -->
@@ -153,7 +153,7 @@
 
     <div id="steps" class="max-md:px-4"></div>
     <script>
-      fetch('/components/page-2/steps.html')
+      fetch('./components/page-2/steps.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('steps');
@@ -194,7 +194,7 @@
     </section>
 
     <section class="relative max-[1029px]:min-h-[800px] min-h-[1200px] bg-white overflow-hidden">
-      <img src="/imgs/environment/sec-4.png" alt="" class="rtl:scale-x-[-1] absolute inset-0 w-full h-full object-cover object-center pointer-events-none" />
+      <img src="./imgs/environment/sec-4.png" alt="" class="rtl:scale-x-[-1] absolute inset-0 w-full h-full object-cover object-center pointer-events-none" />
       <div class="max-[1029px]:block hidden absolute inset-0 w-full h-full pointer-events-none" style="box-shadow: 0px 4px 16px 0px #00000029; backdrop-filter: blur(33.70000076293945px); border: 1px solid; border-image-source: linear-gradient(130.48deg, rgba(0, 99, 55, 0.5) 4.92%, rgba(0, 99, 55, 0) 50.1%, rgba(0, 99, 55, 0.5) 95.28%)"></div>
 
       <div class="relative container !pb-[40px]">
@@ -226,7 +226,7 @@
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <!-- Hayat Mall -->
             <article data-aos="fade-up" data-aos-delay="200" class="rounded-2xl p-6 sm:p-8 flex flex-col items-start gap-6 sm:gap-8 border border-white/20 backdrop-blur-md max-md:bg-slate-800/30  bg-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.25)]">
-              <img src="/imgs/environment/img-1.png" alt="" class="w-[70px] sm:w-[100px]" />
+              <img src="./imgs/environment/img-1.png" alt="" class="w-[70px] sm:w-[100px]" />
               <div>
                 <h4 data-i18n="env.energy.assets.hayat.title" class="text-2xl sm:text-3xl font-semibold text-white truncate">Hayat Mall</h4>
                 <p class="text-lg sm:text-xl text-white/90 mt-1">
@@ -238,7 +238,7 @@
 
             <!-- Hotel -->
             <article data-aos="fade-up" data-aos-delay="300" class="rounded-2xl p-6 sm:p-8 flex flex-col items-start gap-6 sm:gap-8 border border-white/20 backdrop-blur-md max-md:bg-slate-800/30  bg-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.25)]">
-              <img src="/imgs/environment/img-2.png" alt="" class="w-[70px] sm:w-[100px]" />
+              <img src="./imgs/environment/img-2.png" alt="" class="w-[70px] sm:w-[100px]" />
               <div>
                 <h4 data-i18n="env.energy.assets.hotel.title" class="text-2xl sm:text-3xl font-semibold text-white truncate">Alandalus Hotel</h4>
                 <p class="text-lg sm:text-xl text-white/90 mt-1">
@@ -250,7 +250,7 @@
 
             <!-- HQ -->
             <article data-aos="fade-up" data-aos-delay="400" class="rounded-2xl p-6 sm:p-8 flex flex-col items-start gap-6 sm:gap-8 border border-white/20 backdrop-blur-md max-md:bg-slate-800/30  bg-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.25)]">
-              <img src="/imgs/environment/img-3.png" alt="" class="w-[70px] sm:w-[100px]" />
+              <img src="./imgs/environment/img-3.png" alt="" class="w-[70px] sm:w-[100px]" />
               <div>
                 <h4 data-i18n="env.energy.assets.hq.title" class="text-2xl sm:text-3xl font-semibold text-white truncate">Alandalus Head Office</h4>
                 <p class="text-lg sm:text-xl text-white/90 mt-1">
@@ -262,7 +262,7 @@
 
             <!-- Mall -->
             <article data-aos="fade-up" data-aos-delay="500" class="rounded-2xl p-6 sm:p-8 flex flex-col items-start gap-6 sm:gap-8 border border-white/20 backdrop-blur-md max-md:bg-slate-800/30  bg-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.25)]">
-              <img src="/imgs/environment/img-4.png" alt="" class="w-[70px] sm:w-[100px]" />
+              <img src="./imgs/environment/img-4.png" alt="" class="w-[70px] sm:w-[100px]" />
               <div>
                 <h4 data-i18n="env.energy.assets.mall.title" class="text-2xl sm:text-3xl font-semibold text-white truncate">Alandalus Mall</h4>
                 <p class="text-lg sm:text-xl text-white/90 mt-1">
