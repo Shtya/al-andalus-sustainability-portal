@@ -32,16 +32,16 @@
     <meta name="twitter:image" content="https://www.alandalus.com/imgs/hero.png" />
 
     <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta name="theme-color" content="#006337" />
 
     <!-- Performance: fonts, CSS, hero image -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/imgs/hero.png" imagesrcset="/imgs/hero.png 1600w" imagesizes="(min-width: 1024px) 1000px, 100vw" />
+    <link rel="preload" as="image" href="./imgs/hero.png" imagesrcset="./imgs/hero.png 1600w" imagesizes="(min-width: 1024px) 1000px, 100vw" />
     <link rel="preload" as="style" href="./index.css" />
     <link rel="stylesheet" href="./index.css" />
     <link href="./package/aos.css" rel="stylesheet" />
@@ -133,7 +133,7 @@
   </head>
 
   <body class="overflow-x-hidden text-slate-800 bg-white">
-		<!-- here -->
+		<!-- step 1 -->
     <div id="header"></div>
     <script>
       fetch('./components/header.html')
@@ -153,7 +153,7 @@
 
     <section class="relative min-h-[80svh] grid place-items-center overflow-hidden">
       <span class="inset-0 absolute w-full h-full rtl:scale-x-[-1]" style="background: linear-gradient(90deg, rgba(15, 15, 15, 0.89) 20.88%, rgba(15, 15, 15, 0) 100%)"></span>
-      <img src="/imgs/hero.png" alt="Alandalus mall glass roof atrium" class="absolute z-[-1] inset-0 h-full w-full object-cover" loading="eager" />
+      <img src="./imgs/hero.png" alt="Alandalus mall glass roof atrium" class="absolute z-[-1] inset-0 h-full w-full object-cover" loading="eager" />
       <div class="container !py-[100px] md:!py-[200px] relative z-10">
         <div class="max-w-3xl text-white">
           <p data-aos="fade-up" data-i18n="home.hero.kicker" class="text-base md:text-[24px] mb-5">Sustainability At</p>
@@ -190,28 +190,28 @@
         <div class="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
           <!-- 1 -->
           <article data-aos="fade-up" class="py-6 p-3 border-2 border-[#81818195] rounded-2xl bg-white/70 backdrop-blur-[20px] shadow-[0_4px_16px_0_rgba(0,0,0,.16)]" aria-label="Scope and Boundaries">
-            <img src="/imgs/report/1.png" alt="Scope and Boundaries" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
+            <img src="./imgs/report/1.png" alt="Scope and Boundaries" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
             <h3 class="font-semibold text-xl text-[#0F0F0F] mb-1" data-i18n="home.about.cards.scope.title">Scope and Boundaries</h3>
             <p class="text-slate-600" data-i18n="home.about.cards.scope.body">Full-year 2024 coverage; all operations across Saudi Arabia; issued annually.</p>
           </article>
 
           <!-- 2 -->
           <article data-aos="fade-up" data-aos-delay="100" class="py-6 p-3 border-2 border-[#81818195] rounded-2xl bg-white/70 backdrop-blur-[20px] shadow-[0_4px_16px_0_rgba(0,0,0,.16)]" aria-label="Reporting Standards">
-            <img src="/imgs/report/2.png" alt="Reporting Standards" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
+            <img src="./imgs/report/2.png" alt="Reporting Standards" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
             <h3 class="font-semibold text-xl text-[#0F0F0F] mb-1" data-i18n="home.about.cards.standards.title">Reporting Standards</h3>
             <p class="text-slate-600" data-i18n="home.about.cards.standards.body">Prepared according to GRI 2021; aligned with UN SDGs and Saudi Vision 2030.</p>
           </article>
 
           <!-- 3 -->
           <article data-aos="fade-up" data-aos-delay="200" class="py-6 p-3 border-2 border-[#81818195] rounded-2xl bg-white/70 backdrop-blur-[20px] shadow-[0_4px_16px_0_rgba(0,0,0,.16)]" aria-label="Data Collection & Verification">
-            <img src="/imgs/report/3.png" alt="Data Collection & Verification" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
+            <img src="./imgs/report/3.png" alt="Data Collection & Verification" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
             <h3 class="font-semibold text-xl text-[#0F0F0F] mb-1" data-i18n="home.about.cards.data.title">Data Collection &amp; Verification</h3>
             <p class="text-slate-600" data-i18n="home.about.cards.data.body">Data drawn from internal and public sources; verified by external consultancy.</p>
           </article>
 
           <!-- 4 -->
           <article data-aos="fade-up" data-aos-delay="300" class="py-6 p-3 border-2 border-[#81818195] rounded-2xl bg-white/70 backdrop-blur-[20px] shadow-[0_4px_16px_0_rgba(0,0,0,.16)]" aria-label="Stakeholder Engagement">
-            <img src="/imgs/report/4.png" alt="Stakeholder Engagement" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
+            <img src="./imgs/report/4.png" alt="Stakeholder Engagement" class="w-[45px] md:w-[60px] mx-auto mb-4" loading="lazy" />
             <h3 class="font-semibold text-xl text-[#0F0F0F] mb-1" data-i18n="home.about.cards.stakeholders.title">Stakeholder Engagement</h3>
             <p class="text-slate-600" data-i18n="home.about.cards.stakeholders.body">Active engagement with employees, customers, partners, investors, and communities to enhance transparency and reporting quality.</p>
           </article>
@@ -232,7 +232,7 @@
 
     <div id="steps" class="max-md:px-4"></div>
     <script>
-      fetch('/components/steps.html')
+      fetch('./components/steps.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('steps');
@@ -249,13 +249,13 @@
 
     <!-- ===== Home / Sustainability Strategy ===== -->
     <section id="sustainabilityStrategy" class="relative py-14 md:py-[120px] isolate" aria-labelledby="strategy-title">
-      <img src="/imgs/sec-4.jpg" alt="" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" />
+      <img src="./imgs/sec-4.jpg" alt="" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" />
       <div class="absolute inset-0 bg-[#00633799] -z-10" style="backdrop-filter: blur(34px)"></div>
 
-      <img src="/imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] left-3 top-3 w-[200px] opacity-20" />
-      <img src="/imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] scale-x-[-1] right-3 top-3 w-[200px] opacity-20" />
-      <img src="/imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] scale-[-1] right-3 bottom-3 w-[200px] opacity-20" />
-      <img src="/imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] left-3 bottom-3 scale-y-[-1] w-[200px] opacity-20" />
+      <img src="./imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] left-3 top-3 w-[200px] opacity-20" />
+      <img src="./imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] scale-x-[-1] right-3 top-3 w-[200px] opacity-20" />
+      <img src="./imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] scale-[-1] right-3 bottom-3 w-[200px] opacity-20" />
+      <img src="./imgs/frame.svg" alt="" loading="lazy" decoding="async" class="max-md:hidden pointer-events-none select-none absolute duration-300 max-sm:hidden max-md:w-[100px] max-lg:w-[130px] max-xl:w-[150px] left-3 bottom-3 scale-y-[-1] w-[200px] opacity-20" />
 
       <div class="container text-white">
         <!-- Header row -->
@@ -283,27 +283,27 @@
         <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
           <!-- card -->
           <article data-aos="fade-down" class="text-center rounded-2xl border border-white/30 px-3 py-5 shadow-[0_8px_24px_-12px_rgba(0,0,0,.45)]">
-            <img src="/imgs/strategy/5.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
+            <img src="./imgs/strategy/5.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
             <p class="goal-text text-sm md:text-base !text-center" data-i18n="home.strategy.goals.goal1">Creating a welcoming environment for the local community</p>
           </article>
 
           <article data-aos="fade-down" data-aos-delay="100" class="text-center rounded-2xl border border-white/30 px-3 py-5 shadow-[0_8px_24px_-12px_rgba(0,0,0,.45)]">
-            <img src="/imgs/strategy/4.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
+            <img src="./imgs/strategy/4.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
             <p class="goal-text text-sm md:text-base !text-center" data-i18n="home.strategy.goals.goal2">Mitigate our impact on the environment</p>
           </article>
 
           <article data-aos="fade-down" data-aos-delay="200" class="text-center rounded-2xl border border-white/30 px-3 py-5 shadow-[0_8px_24px_-12px_rgba(0,0,0,.45)]">
-            <img src="/imgs/strategy/3.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
+            <img src="./imgs/strategy/3.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
             <p class="goal-text text-sm md:text-base !text-center" data-i18n="home.strategy.goals.goal3">Ensure the well-being of employees</p>
           </article>
 
           <article data-aos="fade-down" data-aos-delay="300" class="text-center rounded-2xl border border-white/30 px-3 py-5 shadow-[0_8px_24px_-12px_rgba(0,0,0,.45)]">
-            <img src="/imgs/strategy/2.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
+            <img src="./imgs/strategy/2.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
             <p class="goal-text text-sm md:text-base !text-center" data-i18n="home.strategy.goals.goal4">Promote Saudization, equality, diversity, and inclusion</p>
           </article>
 
           <article data-aos="fade-down" data-aos-delay="400" class="text-center rounded-2xl border border-white/30 px-3 py-5 shadow-[0_8px_24px_-12px_rgba(0,0,0,.45)]">
-            <img src="/imgs/strategy/1.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
+            <img src="./imgs/strategy/1.png" alt="" class="w-[60px] h-[60px] mx-auto mb-3" loading="lazy" />
             <p class="goal-text text-sm md:text-base !text-center" data-i18n="home.strategy.goals.goal5">Enhance resilience through continuous compliance</p>
           </article>
         </div>
@@ -323,7 +323,7 @@
 
     <div id="steps-goals" class="max-md:px-4"></div>
     <script>
-      fetch('/components/tlx-steps.html')
+      fetch('./components/tlx-steps.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('steps-goals');
@@ -574,7 +574,7 @@
 
     <div id="impact"></div>
     <script>
-      fetch('/components/impact.html')
+      fetch('./components/impact.html')
         .then(r => r.text())
         .then(html => {
           const mount = document.getElementById('impact');
